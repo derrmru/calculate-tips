@@ -21,7 +21,6 @@ function App() {
   }
 
   const deleteEntry = (x) => {
-    console.log(x)
     let dList = list;
     delete dList[x];
     setList(dList);
@@ -84,8 +83,8 @@ function App() {
           Object.keys(list).map((x, i) => {
             return (
               <div key={("div" + i)} className='input-row'>
-                <input key={('employee' + i)} className='input-employee' type="text" defaultValue={x} readOnly />
-                <input key={('hours' + i)} className='input-hours' type="number" defaultValue={list[x]} readOnly />
+                <input key={('employee' + i)} className='input-employee' type="text" value={x} readOnly />
+                <input key={('hours' + i)} className='input-hours' type="number" value={list[x]} readOnly />
                 <button key={('delete' + i)} className='input-delete ripple' onClick={() => deleteEntry(x)}>Delete</button>
               </div>
             )
