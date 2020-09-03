@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 input {
@@ -30,12 +30,17 @@ input {
     font-family: inherit;
 }
 
+input[type="text"], input[type="number"] {
+    font-size: 16px;
+}
+
 button {
     cursor: pointer;
     padding: 20px 10px;
     border-radius: 5px;
     transition: 0.5s;
     font-family: inherit;
+    font-size: 16px;
     border: none;
     background-color: var(--the-white);
     -webkit-appearance: none;

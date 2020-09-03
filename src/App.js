@@ -17,7 +17,7 @@ function App() {
     nList[entry] = hours;
     setList(nList);
     setEntry("");
-    setHours(0);
+    setHours("");
   }
 
   const deleteEntry = (x) => {
@@ -34,7 +34,6 @@ function App() {
   }
 
   const reRender = () => {
-    console.log(openClose)
     setOpenClose(!openClose)
   }
 
@@ -47,7 +46,7 @@ function App() {
 
       <div className="tt-container">
         <h3 className="tt-description">What are your total tips?</h3>
-        <input name="pool" type="number" value={pool} onChange={(e) => setPool(e.target.value)} />
+        <input name="pool" type="number" value={pool} onChange={(e) => setPool(e.target.value)} placeholder="Total Tips" />
       </div>
 
       <hr />
@@ -67,7 +66,7 @@ function App() {
           type="number" 
           value={hours} 
           onChange={(e) => setHours(e.target.value)}
-          placeholder="Hours Worked"
+          placeholder="Hours"
           />
         <button
           className="add-button ripple" 
@@ -85,8 +84,8 @@ function App() {
           Object.keys(list).map((x, i) => {
             return (
               <div key={("div" + i)} className='input-row'>
-                <input key={('employee' + i)} className='input-employee' type="text" defaultValue={x} />
-                <input key={('hours' + i)} className='input-hours' type="number" defaultValue={list[x]} />
+                <input key={('employee' + i)} className='input-employee' type="text" defaultValue={x} readOnly />
+                <input key={('hours' + i)} className='input-hours' type="number" defaultValue={list[x]} readOnly />
                 <button key={('delete' + i)} className='input-delete ripple' onClick={() => deleteEntry(x)}>Delete</button>
               </div>
             )
