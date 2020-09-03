@@ -44,7 +44,7 @@ function App() {
       <hr />
 
       <div className="tt-container">
-        <h3 className="tt-description">What are your total tips?</h3>
+        <h2 className="tt-description">What are your total tips?</h2>
         <input name="pool" type="number" value={pool} onChange={(e) => setPool(e.target.value)} placeholder="Total Tips" />
       </div>
 

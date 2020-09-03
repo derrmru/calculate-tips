@@ -23,6 +23,10 @@ h1 {
     margin: 30px 0;
 }
 
+h2 {
+    font-size: 20px;
+}
+
 input {
     padding: 20px 10px;
     border: 1px solid var(--main-color);
@@ -201,7 +205,7 @@ hr {
         width: 94%;
     }
     .tt-container {
-        padding: 10px;
+        padding: 0;
     }
     .tt-description {
         width: 30%;
