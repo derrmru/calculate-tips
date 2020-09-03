@@ -1,38 +1,207 @@
+/**
+*   GENERAL**************************************
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap');
+
+:root {
+    --main-color: #000000;
+    --second-color: #121420;
+    --the-white: #EBF2FA;
+}
+
+body {
+    text-align: center;
+    background-color: #202C39;
+    color: var(--the-white);
+    font-family: 'Grandstander', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 20px 10px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    padding: 20px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-family: inherit;
+    border: none;
+    background-color: var(--the-white);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: var(--second-color);
+    color: var(--the-white);
+    -webkit-box-shadow: 0px 0px 5px 5px #ebf2fa05;
+    -moz-box-shadow: 0px 0px 5px 5px #ebf2fa05;
+    box-shadow: 0px 0px 5px 5px #ebf2fa05;
+}
+
 .App {
-  text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr {
+    margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .ripple:hover {
+    background: var(--second-color) radial-gradient(circle, transparent 1%, var(--second-color) 1%) center/15000%;
   }
-  to {
-    transform: rotate(360deg);
+  .ripple:active {
+    background-color: var(--second-color);
+    background-size: 100%;
+    transition: background 0s;
   }
+
+/**
+*   TOTAL TIPS**************************************
+*/
+
+.tt-container {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid var(--the-white);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tt-description {
+    width: 40%;
+}
+
+.tt-container input {
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/**
+*   ADD EMPLOYEES AND HOURS**************************************
+*/
+
+.add-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add-employee {
+    width: 50%;
+    border-radius: 5px;
+}
+
+.add-hours {
+    width: 20%;
+    border-radius: 5px;
+}
+
+.add-button {
+    width: 20%;
+    border-radius: 5px;
+}
+
+/**
+*   GENERAL**************************************
+*/
+
+.entered {
+    width: 100%;
+}
+
+.input-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-row input {
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.input-employee {
+    width: 50%;
+}
+
+.input-hours {
+    width: 20%;
+}
+
+.input-delete {
+    width: 20%;
+    word-wrap: break-word;
+}
+
+.calculate-button {
+    width: 98%;
+    margin: 20px 0;
+}
+
+/**
+*   MEDIA QUERIES**************************************
+*/
+
+@media only screen and (max-width: 1025px) {
+    .App {
+        width: 60%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .App {
+        width: 80%;
+    }
+    .add-employee {
+        width: 40%;
+    }
+    .input-employee {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .App {
+        width: 94%;
+    }
+    .tt-container {
+        padding: 10px;
+    }
+    .tt-description {
+        width: 30%;
+    }
+    .tt-container input {
+        width: 30%;
+    }
 }

@@ -1,0 +1,41 @@
+.result-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #202c39fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exit-button {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.row-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.e-result {
+    margin: 0 5px 0 10px;
+    width: 60%;
+    border: 1px solid var(--the-white);
+    padding: 20px;
+}
+
+.h-result {
+    margin: 0 5px 0 10px;
+    width: 40%;
+    border: 1px solid var(--the-white);
+    padding: 20px;
+}
