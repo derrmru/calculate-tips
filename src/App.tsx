@@ -18,7 +18,8 @@ const App: React.FC = () => {
     nList[entry] = hours;
     setList(nList);
     setEntry("");
-    setHours(undefined);
+    setHours(0);
+    setRender(!render)
   }
 
   const deleteEntry = (x: string) => {
