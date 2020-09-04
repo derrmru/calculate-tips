@@ -23,6 +23,7 @@ const Result: React.FC<Props> = (props) => {
             {
                 Object.keys(result).map((x, i) => {
                     return (
+                        x !== "" &&
                         <div 
                             key={'r' + i}
                             className='row-result'
