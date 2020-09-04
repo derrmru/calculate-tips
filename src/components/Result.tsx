@@ -1,7 +1,14 @@
 import React from "react"
 import './Result.css'
 
-const Result = (props) => {
+interface Props {
+    result: {
+        [index: string]: number | undefined 
+    };
+    reRender: () => void;
+}
+
+const Result: React.FC<Props> = (props) => {
     const result = props.result;
     return (
         <div 

@@ -4,24 +4,24 @@ import Result from './components/Result'
 import Footer from './components/Footer';
 import './App.css';
 
-function App() {
-  const [pool, setPool] = useState();
-  const [entry, setEntry] = useState("");
-  const [hours, setHours] = useState("");
-  const [list, setList] = useState({});
-  const [result, setResult] = useState();
-  const [openClose, setOpenClose] = useState('close');
-  const [render, setRender] = useState(true);
+const App: React.FC = () => {
+  const [pool, setPool] = useState<number | undefined>(undefined);
+  const [entry, setEntry] = useState<string>("");
+  const [hours, setHours] = useState<number | undefined>(undefined);
+  const [list, setList] = useState<{[index: string]: number | undefined}>({"": undefined});
+  const [result, setResult] = useState<{[index: string]: number | undefined}>({"": undefined});
+  const [openClose, setOpenClose] = useState<boolean>(false);
+  const [render, setRender] = useState<boolean>(true);
 
   const update = () => {
     let nList = list;
     nList[entry] = hours;
     setList(nList);
     setEntry("");
-    setHours("");
+    setHours(undefined);
   }
 
-  const deleteEntry = (x) => {
+  const deleteEntry = (x: string) => {
     let dList = list;
     delete dList[x];
     setList(dList);
@@ -29,8 +29,9 @@ function App() {
   }
 
   const runCalculation = () => {
-    setResult(calculateTips(pool, list));
-    Object.keys(list).length > 0 && setOpenClose('open')
+    const ct = calculateTips(pool, list);
+    setResult(ct);
+    Object.keys(list).length > 0 && setOpenClose(true)
   }
 
   const reRender = () => {
@@ -46,7 +47,7 @@ function App() {
 
       <div className="tt-container">
         <h2 className="tt-description">What are your total tips?</h2>
-        <input name="pool" type="number" value={pool} onChange={(e) => setPool(e.target.value)} placeholder="Total Tips" />
+        <input name="pool" type="number" value={pool} onChange={(e) => setPool(Number(e.target.value))} placeholder="Total Tips" />
       </div>
 
       <hr />
@@ -65,13 +66,13 @@ function App() {
           name="hours-blank" 
           type="number" 
           value={hours} 
-          onChange={(e) => setHours(e.target.value)}
+          onChange={(e) => setHours(Number(e.target.value))}
           placeholder="Hours"
           />
         <button
           className="add-button ripple" 
           type="submit" 
-          onClick={(e) => entry !== "" && update(e)}
+          onClick={() => entry !== "" && update()}
           >
             Add
           </button>
@@ -98,7 +99,7 @@ function App() {
         <hr />
 
         {
-          openClose === 'open' && <Result 
+          openClose && <Result 
                       result={result}
                       reRender={reRender}
                       />
