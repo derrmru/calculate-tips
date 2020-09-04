@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import calculateTips from './functions';
-import Result from './Result'
+import calculateTips from './functions/functions';
+import Result from './components/Result'
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -102,6 +103,8 @@ function App() {
                       reRender={reRender}
                       />
         }
+
+        <Footer />
 
     </div>
   );

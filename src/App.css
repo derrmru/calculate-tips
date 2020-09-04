@@ -52,14 +52,6 @@ button {
     outline: none;
 }
 
-button:hover {
-    background-color: var(--second-color);
-    color: var(--the-white);
-    -webkit-box-shadow: 0px 0px 5px 5px #ebf2fa05;
-    -moz-box-shadow: 0px 0px 5px 5px #ebf2fa05;
-    box-shadow: 0px 0px 5px 5px #ebf2fa05;
-}
-
 .App {
     width: 50%;
     margin: auto;

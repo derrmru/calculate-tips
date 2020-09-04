@@ -10,7 +10,6 @@ const Result = (props) => {
             >
             <div 
                 className='exit-button'
-                onClick={() => props.reRender()}
                 >
                 |X|
             </div>
