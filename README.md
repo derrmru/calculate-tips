@@ -3,4 +3,4 @@
 
 Easily split the tip pool proportionally amongst all staff.
 
-Progressive Web App built with React JS.
+Progressive Web App built with React and Typescript.
