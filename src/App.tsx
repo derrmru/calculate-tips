@@ -8,8 +8,8 @@ const App: React.FC = () => {
   const [pool, setPool] = useState<number | undefined>(undefined);
   const [entry, setEntry] = useState<string>("");
   const [hours, setHours] = useState<number | undefined>(undefined);
-  const [list, setList] = useState<{[index: string]: number | undefined}>({"": undefined});
-  const [result, setResult] = useState<{[index: string]: number | undefined}>({"": undefined});
+  const [list, setList] = useState<{[index: string]: number | undefined}>({});
+  const [result, setResult] = useState<{[index: string]: number | undefined}>({});
   const [openClose, setOpenClose] = useState<boolean>(false);
   const [render, setRender] = useState<boolean>(true);
 
