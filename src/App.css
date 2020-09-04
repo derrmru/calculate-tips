@@ -66,15 +66,7 @@ hr {
 .ripple {
     background-position: center;
     transition: background 0.8s;
-  }
-  .ripple:hover {
-    background: var(--second-color) radial-gradient(circle, transparent 1%, var(--second-color) 1%) center/15000%;
-  }
-  .ripple:active {
-    background-color: var(--second-color);
-    background-size: 100%;
-    transition: background 0s;
-  }
+}
 
 /**
 *   TOTAL TIPS**************************************
@@ -173,10 +165,26 @@ hr {
 *   MEDIA QUERIES**************************************
 */
 
+@media only screen and (min-width: 1025px) {
+    .ripple:hover {
+        background: var(--second-color) radial-gradient(circle, transparent 1%, var(--second-color) 1%) center/15000%;
+    }
+    .ripple:active {
+        background-color: var(--second-color);
+        background-size: 100%;
+        transition: background 0s;
+    }
+}
+
 @media only screen and (max-width: 1025px) {
     .App {
         width: 60%;
         padding: 0;
+    }
+    .ripple:active {
+        background-color: var(--second-color);
+        background-size: 100%;
+        transition: background 0s;
     }
 }
 
