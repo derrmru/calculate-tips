@@ -49,7 +49,14 @@ const App: React.FC = () => {
 
       <div className="tt-container">
         <h2 className="tt-description">What are your total tips?</h2>
-        <input name="pool" type="number" value={pool} onChange={(e) => setPool(Number(e.target.value))} placeholder="Total Tips" />
+        <input 
+          name="pool" 
+          type="number" 
+          value={pool} 
+          onChange={(e) => setPool(Number(e.target.value))} 
+          placeholder="Total Tips" 
+          aria-label="Input Total Tips"
+          />
       </div>
 
       <hr />
@@ -62,6 +69,7 @@ const App: React.FC = () => {
           value={entry} 
           onChange={(e) => setEntry(e.target.value)} 
           placeholder="Employee"
+          aria-label="Employee Name"
           />
         <input 
           className="add-hours"
@@ -70,6 +78,7 @@ const App: React.FC = () => {
           value={hours} 
           onChange={(e) => setHours(Number(e.target.value))}
           placeholder="Hours"
+          aria-label="Hours Employee Has Worked For the Period"
           />
         <button
           className="add-button ripple" 
