@@ -7,8 +7,8 @@ import './App.css';
 const App: React.FC = () => {
   const [pool, setPool] = useState<number | undefined>(undefined);
   const [entry, setEntry] = useState<string>("");
-  const [hours, setHours] = useState<number | undefined>(undefined);
-  const [list, setList] = useState<{[index: string]: number | undefined}>({});
+  const [hours, setHours] = useState<number | string | undefined>("");
+  const [list, setList] = useState<{[index: string]: number | string | undefined}>({});
   const [result, setResult] = useState<{[index: string]: number | undefined}>({});
   const [openClose, setOpenClose] = useState<boolean>(false);
   const [render, setRender] = useState<boolean>(true);
@@ -18,7 +18,7 @@ const App: React.FC = () => {
     nList[entry] = hours;
     setList(nList);
     setEntry("");
-    setHours(0);
+    setHours("");
     setRender(!render)
   }
 
@@ -43,6 +43,7 @@ const App: React.FC = () => {
     <div className="App">
 
       <h1>Split My Tips</h1>
+      <p>Calculate how to split tips by hours</p>
 
       <hr />
 

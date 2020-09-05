@@ -168,6 +168,7 @@ hr {
 @media only screen and (min-width: 1025px) {
     .ripple:hover {
         background: var(--second-color) radial-gradient(circle, transparent 1%, var(--second-color) 1%) center/15000%;
+        color: var(--the-white);
     }
     .ripple:active {
         background-color: var(--second-color);
