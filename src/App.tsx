@@ -43,7 +43,7 @@ const App: React.FC = () => {
     <div className="App">
 
       <h1>Split My Tips</h1>
-      <p>Calculate how to split tips by hours</p>
+      <p>How to split tips by hours</p>
 
       <hr />
 
