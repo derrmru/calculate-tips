@@ -55,7 +55,7 @@ const InstallMessage = () => {
                                                             className="share-text"
                                                             >
                                                                 Install this webapp on your iPhone: tap 
-                                                                <br />and then Add to homescreen.
+                                                                <br />and then 'Add to Home Screen'.
                                                         </div>
 
                                                         <img 
@@ -72,7 +72,7 @@ const InstallMessage = () => {
                                             className="message-button"
                                             onClick={() => setOpenClose(!openClose)}
                                             >
-                                                &#60;
+                                                <p>|x|</p>
                                         </button>
                                     </div>
                             </div>}
