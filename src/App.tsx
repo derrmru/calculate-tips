@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import calculateTips from './functions/functions';
 import Result from './components/Result'
 import Footer from './components/Footer';
+import InstallMessage from './components/InstallMessage';
 import './App.css';
 
 const App: React.FC = () => {
@@ -117,6 +118,8 @@ const App: React.FC = () => {
         }
 
         <Footer />
+
+        <InstallMessage />
 
     </div>
   );

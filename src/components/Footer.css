@@ -1,3 +1,7 @@
+.footer-container {
+    margin: 20px 0;
+}
+
 .footer-container a {
     color: var(--the-white);
 }
