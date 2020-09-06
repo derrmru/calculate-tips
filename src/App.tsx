@@ -6,7 +6,7 @@ import InstallMessage from './components/InstallMessage';
 import './App.css';
 
 const App: React.FC = () => {
-  const [pool, setPool] = useState<number | undefined>(undefined);
+  const [pool, setPool] = useState<number | string | undefined>(undefined);
   const [entry, setEntry] = useState<string>("");
   const [hours, setHours] = useState<number | string | undefined>("");
   const [list, setList] = useState<{[index: string]: number | string | undefined}>({});

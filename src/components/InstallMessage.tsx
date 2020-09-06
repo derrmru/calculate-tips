@@ -27,7 +27,7 @@ const InstallMessage = () => {
         <>
             {showMessage && <div 
                                 className="i-message-container" 
-                                style={openClose ? {animationName: "slideout", width: "100%"} : {animationName: "slideIn", width: "10%"}}
+                                style={openClose ? {animationName: "slideout", width: "100%"} : {animationName: "slideIn", width: "0", opacity: 0}}
                                 >
                                     <div
                                         className="i-message" 
@@ -72,7 +72,7 @@ const InstallMessage = () => {
                                             className="message-button"
                                             onClick={() => setOpenClose(!openClose)}
                                             >
-                                                {openClose ? <>&#60;</> : <>&#62;</>}
+                                                &#60;
                                         </button>
                                     </div>
                             </div>}
