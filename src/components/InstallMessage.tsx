@@ -21,7 +21,7 @@ const InstallMessage = () => {
         if (isIos() && !isInStandaloneMode() && windowWidth < 600) {
             setShowMessage( true );
         }
-    })
+    }, [])
 
     return (
         <>
@@ -48,6 +48,7 @@ const InstallMessage = () => {
                                                         <img
                                                             src={require('../images/iOS-ath.png')}
                                                             className="ath-button"
+                                                            alt="Add to homepage icon"
                                                             />
                                                         
                                                         <div 
@@ -60,6 +61,7 @@ const InstallMessage = () => {
                                                         <img 
                                                             src={require('../images/iOS-share.png')} 
                                                             className="share-button"
+                                                            alt="Share document icon"
                                                         />
                                                         
                                                     </p>
