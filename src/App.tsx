@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculateTips from './functions/functions';
+import TotalTips from './components/TotalTips';
 import Entered from './components/Entered';
 import AddEntry from './components/AddEntry';
 import Result from './components/Result';
@@ -8,7 +9,7 @@ import InstallMessage from './components/InstallMessage';
 import './App.css';
 
 const App: React.FC = () => {
-  const [pool, setPool] = useState<number | string | undefined>(undefined);
+  const [pool, setPool] = useState<number | string>("");
   const [entry, setEntry] = useState<string>("");
   const [hours, setHours] = useState<number | string>("");
   const [list, setList] = useState<{[index: string]: number | string | undefined}>({});
@@ -50,17 +51,10 @@ const App: React.FC = () => {
 
       <hr />
 
-      <div className="tt-container">
-        <h2 className="tt-description">What are your total tips?</h2>
-        <input 
-          name="pool" 
-          type="number" 
-          value={pool} 
-          onChange={(e) => setPool(Number(e.target.value))} 
-          placeholder="Total Tips" 
-          aria-label="Input Total Tips"
-          />
-      </div>
+      <TotalTips 
+        pool={pool}
+        setPool={setPool}
+        />
 
       <hr />
 
@@ -85,9 +79,9 @@ const App: React.FC = () => {
 
       {
         openClose && <Result 
-                    result={result}
-                    reRender={reRender}
-                    />
+                        result={result}
+                        reRender={reRender}
+                        />
       }
 
       <Footer />
