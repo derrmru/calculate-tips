@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import calculateTips from './functions/functions';
-import Entered from './components/Entered'
-import Result from './components/Result'
+import Entered from './components/Entered';
+import AddEntry from './components/AddEntry';
+import Result from './components/Result';
 import Footer from './components/Footer';
 import InstallMessage from './components/InstallMessage';
 import './App.css';
@@ -9,7 +10,7 @@ import './App.css';
 const App: React.FC = () => {
   const [pool, setPool] = useState<number | string | undefined>(undefined);
   const [entry, setEntry] = useState<string>("");
-  const [hours, setHours] = useState<number | string | undefined>("");
+  const [hours, setHours] = useState<number | string>("");
   const [list, setList] = useState<{[index: string]: number | string | undefined}>({});
   const [result, setResult] = useState<{[index: string]: number | undefined}>({});
   const [openClose, setOpenClose] = useState<boolean>(false);
@@ -63,33 +64,13 @@ const App: React.FC = () => {
 
       <hr />
 
-      <div className="add-container">
-        <input 
-          className="add-employee" 
-          name="employee-blank" 
-          type="text" 
-          value={entry} 
-          onChange={(e) => setEntry(e.target.value)} 
-          placeholder="Employee"
-          aria-label="Employee Name"
-          />
-        <input 
-          className="add-hours"
-          name="hours-blank" 
-          type="number" 
-          value={hours} 
-          onChange={(e) => setHours(Number(e.target.value))}
-          placeholder="Hours"
-          aria-label="Hours Employee Has Worked For the Period"
-          />
-        <button
-          className="add-button ripple" 
-          type="submit" 
-          onClick={() => entry !== "" && update()}
-          >
-            Add
-          </button>
-      </div>
+      <AddEntry 
+        entry={entry}
+        setEntry={setEntry}
+        hours={hours}
+        setHours={setHours}
+        update={update}
+        />
 
       <hr />
 
