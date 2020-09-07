@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import calculateTips from './functions/functions';
+import Entered from './components/Entered'
 import Result from './components/Result'
 import Footer from './components/Footer';
 import InstallMessage from './components/InstallMessage';
@@ -92,34 +93,25 @@ const App: React.FC = () => {
 
       <hr />
 
-      <div className='entered'>
-        {
-          Object.keys(list).map((x, i) => {
-            return (
-              <div key={("div" + i)} className='input-row'>
-                <input key={('employee' + i)} className='input-employee' type="text" value={x} readOnly />
-                <input key={('hours' + i)} className='input-hours' type="number" value={list[x]} readOnly />
-                <button key={('delete' + i)} className='input-delete ripple' onClick={() => deleteEntry(x)}>Delete</button>
-              </div>
-            )
-          })
-        }
-      </div>
+      <Entered 
+        list={list}
+        deleteEntry={deleteEntry}
+        />
 
-        <button className="calculate-button ripple" onClick={() => runCalculation()}>Calculate Tips</button>
+      <button className="calculate-button ripple" onClick={() => runCalculation()}>Calculate Tips</button>
 
-        <hr />
+      <hr />
 
-        {
-          openClose && <Result 
-                      result={result}
-                      reRender={reRender}
-                      />
-        }
+      {
+        openClose && <Result 
+                    result={result}
+                    reRender={reRender}
+                    />
+      }
 
-        <Footer />
+      <Footer />
 
-        <InstallMessage />
+      <InstallMessage />
 
     </div>
   );
