@@ -12,10 +12,12 @@ ReactGA.initialize('UA-177613300-1');
 
 const SplitWithSupportStaff: React.FC = () => {
     ReactGA.pageview('/split-with-support-staff');
+
     const [stage, setStage] = useState<number>(1);
     const [staffSplits, setStaffSplits] = useState<{[index: string]: number | string}>({});
     const [pool, setPool] = useState<number | string>("");
     const [poolWarn, setPoolWarn] = useState<boolean>(false);
+    const [catWarn, setCatWarn] = useState<boolean>(false);
     const [render, setRender] = useState<boolean>(true);
 
     const ssKeys = Object.keys(staffSplits);
@@ -35,9 +37,14 @@ const SplitWithSupportStaff: React.FC = () => {
         setRender(!render)
     }
 
-    const increment = (b: number) => {
-        (stage === 2 && (pool === "" || pool === 0)) ? setPoolWarn(true) :
-            ((stage + b) >= 1 && (stage + b) <= 3) && setStage((stage + b));
+    const increment = (b: number) => {//increment through the three stages or warn if page is unfinished
+        if (stage === 2 && (pool === "" || pool === 0)) {
+            setPoolWarn(true)
+        } else if (stage === 1 && Object.keys(staffSplits).length === 0) {
+            setCatWarn(true)
+        } else if ((stage + b) >= 1 && (stage + b) <= 3) {
+            setStage((stage + b))
+        }
     }
 
     return (
@@ -63,6 +70,8 @@ const SplitWithSupportStaff: React.FC = () => {
                     updateSplits={updateSplits}
                     staffSplits={staffSplits}
                     />
+                
+                {catWarn && <div className="warn">There Must Be At Least One Staff Category</div>}
 
                 {ssKeys.length > 0 && <>
                     <h3>Your Categories</h3>

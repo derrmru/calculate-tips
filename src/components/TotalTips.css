@@ -2,7 +2,7 @@
     width: 40%;
 }
 
-.pool-warn {
+.warn {
     font-size: 12px;
     font-weight: bold;
     color: var(--the-red);

@@ -16,7 +16,7 @@ const TotalTips: React.FC<Props> = (props) => {
             <h2 className="tt-description">What are your total tips?</h2>
 
             <div className="vertical-pool">
-                {props.poolWarn && <div className="pool-warn">Please Input a Number Here</div>}
+                {props.poolWarn && <div className="warn">Please Input a Number Here</div>}
                 <input 
                 className="v-input"
                 name="pool" 
