@@ -20,6 +20,7 @@ const App: React.FC = () => {
   const [list, setList] = useState<{[index: string]: number | string}>({});
   const [result, setResult] = useState<{[index: string]: number | undefined}>({});
   const [openClose, setOpenClose] = useState<boolean>(false);
+  const [poolWarn, setPoolWarn] = useState<boolean>(false);
   const [render, setRender] = useState<boolean>(true);
 
   const update = () => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
   }
 
   const runCalculation = () => {
+    (pool === 0 || pool === "") ? setPoolWarn(true) : setPoolWarn(false);
     const ct = calculateTips(pool, list);
     setResult(ct);
     Object.keys(list).length > 0 && setOpenClose(true)
@@ -59,6 +61,7 @@ const App: React.FC = () => {
 
       <TotalTips 
         pool={pool}
+        poolWarn={poolWarn}
         setPool={setPool}
         />
 

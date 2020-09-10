@@ -15,6 +15,7 @@ const SplitWithSupportStaff: React.FC = () => {
     const [stage, setStage] = useState<number>(1);
     const [staffSplits, setStaffSplits] = useState<{[index: string]: number | string}>({});
     const [pool, setPool] = useState<number | string>("");
+    const [poolWarn, setPoolWarn] = useState<boolean>(false);
     const [render, setRender] = useState<boolean>(true);
 
     const ssKeys = Object.keys(staffSplits);
@@ -35,7 +36,8 @@ const SplitWithSupportStaff: React.FC = () => {
     }
 
     const increment = (b: number) => {
-        ((stage + b) >= 1 && (stage + b) <= 3) && setStage((stage + b));
+        (stage === 2 && (pool === "" || pool === 0)) ? setPoolWarn(true) :
+            ((stage + b) >= 1 && (stage + b) <= 3) && setStage((stage + b));
     }
 
     return (
@@ -94,6 +96,7 @@ const SplitWithSupportStaff: React.FC = () => {
                 <>
                     <TotalTips 
                         pool={pool}
+                        poolWarn={poolWarn}
                         setPool={setPool}
                         />
 
