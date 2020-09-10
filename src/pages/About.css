@@ -1,0 +1,30 @@
+.about-text {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    padding: 0 0 40px 0;
+}
+
+.about-text h2 {
+    margin: 50px 0;
+}
+
+.about-text a {
+    text-decoration: none;
+    color: var(--the-white);
+}
+
+.about-text a:hover {
+    transition: 0.5s;
+    color: var(--main-color);
+}
+
+/**
+*   MEDIA QUERIES**************************************
+*/
+
+@media only screen and (max-width: 700px) {
+    .about-text {
+        width: 90%;
+    }
+}

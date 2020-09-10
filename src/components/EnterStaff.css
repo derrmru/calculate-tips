@@ -1,0 +1,58 @@
+.next-cat-button {
+    width: 98%;
+    margin: 20px 0 0 0;
+}
+
+/**
+*THE CATEGORIES ****************************
+*/
+
+.employee-row {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.the-employee {
+    width: 40%;
+    border: 2px solid var(--the-white);
+    padding: 10px;
+    margin: 10px;
+}
+
+.the-hours {
+    width: 30%;
+    border: 2px solid var(--the-white);
+    padding: 10px;
+    margin: 10px;
+}
+
+/**
+*INPUT ***********************************
+*/
+
+.entry-point-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.entry-point-container input {
+    border-radius: 5px;
+}
+
+.employee {
+    width: 50%;
+}
+
+.hours {
+    width: 20%;
+}
+
+.add-button {
+    width: 20%;
+}
