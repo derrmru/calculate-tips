@@ -4,7 +4,6 @@ import About from "./pages/About";
 import SplitByHours from './pages/SplitByHours';
 import SplitWithSupportStaff from './pages/SplitWithSupportStaff';
 import NotFoundPage from './pages/NotFoundPage';
-import ReactGA from 'react-ga';
 import './App.css';
 
 const routes: {} = {
