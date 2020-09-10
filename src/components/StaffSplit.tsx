@@ -40,7 +40,7 @@ const StaffSplits: React.FC<Props> = (props) => {
                     Percentage of Tips <br />
                     <input 
                         type="number" 
-                        onChange={(e) => setSplit(e.target.value)}
+                        onChange={(e) => setSplit(Number(e.target.value))}
                         value={split}
                         placeholder="e.g. 10%"
                         />
