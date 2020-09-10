@@ -13,10 +13,11 @@ const About: React.FC = () => {
             <Menu />
             <div className="about-text">
                 <h1>How To Split Tips</h1>
-                    <p>There is no one way of splitting tips amongst staff. The two most common are:</p>
+                    <p>There is no one way of splitting tips amongst staff. Though many restaurants do split tips fairly amongst their staff.</p>
+                    <p>The two most common methods are:</p>
                     <ul>
                         <li>Splitting by Hours Worked</li>
-                        <li>Splitting Amonst Support Staff</li>
+                        <li>Splitting Amongst Support Staff</li>
                     </ul>
 
                 <h2>Splitting By Hours</h2>
@@ -27,8 +28,8 @@ const About: React.FC = () => {
                     </a>
 
                 <h2>Splitting Tips Amongst Support Staff</h2>
-                    <p>Some restaurants choose to split their tip pool (all of the tips) amongst all of their staff. This means that all supporting staff get a fair share, and noone will suffer from having a particularly bad shift.</p>
-                    <p>Most managers will choose splits amongst different staff categories, e.g.</p>
+                    <p>Some restaurants choose to split their tip pool (all of the tips) amongst all of their staff. This means that all supporting staff get a fair share, and no-one will suffer from having a particularly bad shift.</p>
+                    <p>Most managers will split the pool amongst different staff categories, e.g.</p>
                     <ul>
                         <li>Bar Staff: 20%</li>
                         <li>Waiters: 40%</li>
