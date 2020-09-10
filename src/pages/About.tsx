@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <Menu />
             <div className="about-text">
                 <h1>How To Split Tips</h1>
-                    <p>There is no one way of splitting tips amongst staff. Though many restaurants do split tips fairly amongst their staff.</p>
+                    <p>There is no one way of splitting tips fairly amongst staff.</p>
                     <p>The two most common methods are:</p>
                     <ul>
                         <li>Splitting by Hours Worked</li>
