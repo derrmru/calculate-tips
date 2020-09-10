@@ -7,6 +7,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import "./SplitWithSupportStaff.css";
 
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+    ReactGA.initialize('UA-177613300-1');
+    ReactGA.pageview('/split-with-support-staff');
+  }
+
 const SplitWithSupportStaff: React.FC = () => {
     const [stage, setStage] = useState<number>(1);
     const [staffSplits, setStaffSplits] = useState<{[index: string]: number | string}>({});

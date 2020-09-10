@@ -1,7 +1,13 @@
 import React from 'react';
 import Menu from '../components/Menu';
 import Footer from '../components/Footer';
+import ReactGA from 'react-ga';
 import "./About.css";
+
+function initializeReactGA() {
+    ReactGA.initialize('UA-177613300-1');
+    ReactGA.pageview('/about');
+  }
 
 const About: React.FC = () => {
     return (

@@ -7,7 +7,13 @@ import AddEntry from '../components/AddEntry';
 import Result from '../components/Result';
 import Footer from '../components/Footer';
 import InstallMessage from '../components/InstallMessage';
+import ReactGA from 'react-ga';
 import '../App.css';
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-177613300-1');
+  ReactGA.pageview('/split-by-hours');
+}
 
 const App: React.FC = () => {
   const [pool, setPool] = useState<number | string>("");
