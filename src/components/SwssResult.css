@@ -1,14 +1,15 @@
 .result-container {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 80;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
     background-color: #202c39fd;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 80px 0 50vh 0;
+    z-index: 1000;
 }
 
 .exit-button {
@@ -33,7 +34,7 @@
     border: 2px solid var(--the-white);
     margin: 10px;
     padding: 10px;
-    min-height: 36px;
+    min-height: 20px;
 }
 
 .y-splits {
@@ -41,5 +42,5 @@
     border: 2px solid var(--the-white);
     margin: 10px;
     padding: 10px;
-    min-height: 36px;
+    min-height: 20px;
 }
