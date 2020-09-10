@@ -12,6 +12,8 @@ function initializeReactGA() {
   ReactGA.pageview('/homepage');
 }
 
+initializeReactGA()
+
 const routes: {} = {
   '/': () => <SplitByHours />,
   '/about': () => <About />,

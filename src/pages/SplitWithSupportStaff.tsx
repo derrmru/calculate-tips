@@ -14,6 +14,8 @@ function initializeReactGA() {
     ReactGA.pageview('/split-with-support-staff');
   }
 
+initializeReactGA()
+
 const SplitWithSupportStaff: React.FC = () => {
     const [stage, setStage] = useState<number>(1);
     const [staffSplits, setStaffSplits] = useState<{[index: string]: number | string}>({});

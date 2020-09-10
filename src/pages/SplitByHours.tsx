@@ -15,6 +15,8 @@ function initializeReactGA() {
   ReactGA.pageview('/split-by-hours');
 }
 
+initializeReactGA()
+
 const App: React.FC = () => {
   const [pool, setPool] = useState<number | string>("");
   const [entry, setEntry] = useState<string>("");

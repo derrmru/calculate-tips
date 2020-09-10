@@ -9,6 +9,8 @@ function initializeReactGA() {
     ReactGA.pageview('/about');
   }
 
+initializeReactGA()
+
 const About: React.FC = () => {
     return (
         <div>
