@@ -10,14 +10,10 @@ import InstallMessage from '../components/InstallMessage';
 import ReactGA from 'react-ga';
 import '../App.css';
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-177613300-1');
-  ReactGA.pageview('/split-by-hours');
-}
-
-initializeReactGA()
+ReactGA.initialize('UA-177613300-1');
 
 const App: React.FC = () => {
+  ReactGA.pageview('/split-by-hours');
   const [pool, setPool] = useState<number | string>("");
   const [entry, setEntry] = useState<string>("");
   const [hours, setHours] = useState<number | string>("");

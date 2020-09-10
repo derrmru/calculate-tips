@@ -7,13 +7,6 @@ import NotFoundPage from './pages/NotFoundPage';
 import ReactGA from 'react-ga';
 import './App.css';
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-177613300-1');
-  ReactGA.pageview('/homepage');
-}
-
-initializeReactGA()
-
 const routes: {} = {
   '/': () => <SplitByHours />,
   '/about': () => <About />,

@@ -5,18 +5,13 @@ import TotalTips from '../components/TotalTips';
 import EnterStaff from '../components/EnterStaff';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import ReactGA from 'react-ga';
 import "./SplitWithSupportStaff.css";
 
-import ReactGA from 'react-ga';
-
-function initializeReactGA() {
-    ReactGA.initialize('UA-177613300-1');
-    ReactGA.pageview('/split-with-support-staff');
-  }
-
-initializeReactGA()
+ReactGA.initialize('UA-177613300-1');
 
 const SplitWithSupportStaff: React.FC = () => {
+    ReactGA.pageview('/split-with-support-staff');
     const [stage, setStage] = useState<number>(1);
     const [staffSplits, setStaffSplits] = useState<{[index: string]: number | string}>({});
     const [pool, setPool] = useState<number | string>("");

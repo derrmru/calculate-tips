@@ -4,14 +4,10 @@ import Footer from '../components/Footer';
 import ReactGA from 'react-ga';
 import "./About.css";
 
-function initializeReactGA() {
-    ReactGA.initialize('UA-177613300-1');
-    ReactGA.pageview('/about');
-  }
-
-initializeReactGA()
+ReactGA.initialize('UA-177613300-1');
 
 const About: React.FC = () => {
+    ReactGA.pageview('/about');
     return (
         <div>
             <Menu />
