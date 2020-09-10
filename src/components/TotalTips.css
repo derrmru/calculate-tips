@@ -5,7 +5,7 @@
 .pool-warn {
     font-size: 12px;
     font-weight: bold;
-    color: rgb(126, 17, 17);
+    color: var(--the-red);
     margin: 0 0 5px 0;
 }
 

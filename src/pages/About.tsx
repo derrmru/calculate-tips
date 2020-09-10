@@ -31,7 +31,7 @@ const About: React.FC = () => {
                     <p>Some restaurants choose to split their tip pool (all of the tips) amongst all of their staff. This means that all supporting staff get a fair share, and no-one will suffer from having a particularly bad shift.</p>
                     <p>Most managers will split the pool amongst different staff categories, e.g.</p>
                     <ul>
-                        <li>Bar Staff: 20%</li>
+                        <li>Bar Staff: 30%</li>
                         <li>Waiters: 40%</li>
                         <li>Kitchen Porters: 20%</li>
                         <li>Chefs: 10%</li>
