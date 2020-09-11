@@ -46,7 +46,7 @@ const InstallMessage = () => {
                                                         >
                                                         
                                                         <img
-                                                            src={require('../images/iOS-ath.png')}
+                                                            src={require('../../images/iOS-ath.png')}
                                                             className="ath-button"
                                                             alt="Add to homepage icon"
                                                             />
@@ -59,7 +59,7 @@ const InstallMessage = () => {
                                                         </div>
 
                                                         <img 
-                                                            src={require('../images/iOS-share.png')} 
+                                                            src={require('../../images/iOS-share.png')} 
                                                             className="share-button"
                                                             alt="Share document icon"
                                                         />
