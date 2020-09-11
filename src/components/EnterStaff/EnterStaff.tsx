@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SwssResult from '../components/SwssResult/SwssResult';
-import calculateComplexTips from '../functions/calculateComplexTips';
+import SwssResult from '../../components/SwssResult/SwssResult';
+import calculateComplexTips from '../../functions/calculateComplexTips';
 import './EnterStaff.css';
 
 interface Props {

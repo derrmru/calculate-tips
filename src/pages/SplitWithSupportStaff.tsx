@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Menu from '../components/Menu/Menu';
 import StaffSplit from '../components/StaffSplit/StaffSplit';
 import TotalTips from '../components/TotalTips/TotalTips';
-import EnterStaff from '../components/EnterStaff';
+import EnterStaff from '../components/EnterStaff/EnterStaff';
 import Navigation from '../components/Navigation/Navigation';
 import Footer from '../components/Footer/Footer';
 import ReactGA from 'react-ga';
