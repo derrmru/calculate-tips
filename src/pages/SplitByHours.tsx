@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import calculateTips from '../functions/calculateTips';
-import Menu from '../components/Menu';
-import TotalTips from '../components/TotalTips';
-import Entered from '../components/Entered';
+import Menu from '../components/Menu/Menu';
+import TotalTips from '../components/TotalTips/TotalTips';
+import Entered from '../components/Entered/Entered';
 import AddEntry from '../components/AddEntry';
-import Result from '../components/Result';
-import Footer from '../components/Footer';
-import InstallMessage from '../components/InstallMessage';
+import Result from '../components/Result/Result';
+import Footer from '../components/Footer/Footer';
+import InstallMessage from '../components/InstallMessage/InstallMessage';
 import ReactGA from 'react-ga';
 import '../App.css';
 

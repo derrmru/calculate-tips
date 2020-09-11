@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SwssResult from '../components/SwssResult';
+import SwssResult from '../components/SwssResult/SwssResult';
 import calculateComplexTips from '../functions/calculateComplexTips';
 import './EnterStaff.css';
 

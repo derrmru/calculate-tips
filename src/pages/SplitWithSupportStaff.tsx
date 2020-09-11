@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Menu from '../components/Menu';
-import StaffSplit from '../components/StaffSplit';
-import TotalTips from '../components/TotalTips';
+import Menu from '../components/Menu/Menu';
+import StaffSplit from '../components/StaffSplit/StaffSplit';
+import TotalTips from '../components/TotalTips/TotalTips';
 import EnterStaff from '../components/EnterStaff';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation/Navigation';
+import Footer from '../components/Footer/Footer';
 import ReactGA from 'react-ga';
 import "./SplitWithSupportStaff.css";
 
@@ -72,7 +72,7 @@ const SplitWithSupportStaff: React.FC = () => {
             }
             <hr />
 
-            {stage === 1 ?
+            {stage === 1 ? //first stage - designate your staff categories (these are stored in staffSplits state)
                 <>
                 <StaffSplit 
                     updateSplits={updateSplits}
@@ -86,7 +86,7 @@ const SplitWithSupportStaff: React.FC = () => {
                     <h3>Your Categories</h3>
                     <div className="the-items">
                     {
-                        ssKeys.map((a, i) => {
+                        ssKeys.map((a, i) => { //show the categories that have been committed
                             return <div 
                                 key={('si' + i)}
                                 className="staff-item"
@@ -110,7 +110,7 @@ const SplitWithSupportStaff: React.FC = () => {
                 <hr />
                 </>
 
-                : stage === 2 ? 
+                : stage === 2 ? //Input total tips view - stored in state pool
                 <>
                     <TotalTips 
                         pool={pool}
@@ -121,7 +121,7 @@ const SplitWithSupportStaff: React.FC = () => {
                     <hr />
                 </>
                 
-                : stage === 3 && 
+                : stage === 3 && //Input staff and their hours progressively through each category
                 <>
                     <EnterStaff 
                         pool={pool}

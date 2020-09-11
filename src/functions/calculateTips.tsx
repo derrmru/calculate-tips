@@ -1,8 +1,9 @@
-
 const calculateTips = (pool: number | string | undefined, list: {[index: string]: number | string | undefined}) => {
     //calculate total hours
     let totalHours = 0;
-    Object.keys(list).map((x) => {
+    let keys = Object.keys(list);
+
+    keys.map((x) => {
         return totalHours += Number(list[x]);
     }) 
 
@@ -11,7 +12,7 @@ const calculateTips = (pool: number | string | undefined, list: {[index: string]
 
     //new List with tip value associated with employee
     let newList: {[index: string]: number | undefined } = {"": undefined};
-    Object.keys(list).map((x) => {
+    keys.map((x) => {
         let num: any = list[x];
         return newList[x] = Number((tph * num).toFixed(2));
     })
