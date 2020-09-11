@@ -18,6 +18,7 @@ const SplitWithSupportStaff: React.FC = () => {
     const [pool, setPool] = useState<number | string>("");
     const [poolWarn, setPoolWarn] = useState<boolean>(false);
     const [catWarn, setCatWarn] = useState<boolean>(false);
+    const [percWarn, setPercWarn] = useState<boolean>(false);
     const [render, setRender] = useState<boolean>(true);
 
     const ssKeys = Object.keys(staffSplits);
@@ -38,10 +39,17 @@ const SplitWithSupportStaff: React.FC = () => {
     }
 
     const increment = (b: number) => {//increment through the three stages or warn if page is unfinished
+        let totalPercentage = 0; //find total Percentage
+            for (let i = 0; i < ssKeys.length; i++) {
+                totalPercentage += Number(staffSplits[ssKeys[i]]);
+            }
+
         if (stage === 2 && (pool === "" || pool === 0)) {
             setPoolWarn(true)
-        } else if (stage === 1 && Object.keys(staffSplits).length === 0) {
-            setCatWarn(true)
+        } else if (stage === 1 && ssKeys.length === 0) {
+            setCatWarn(true) //if there are no categories warn user there must be at least 1
+        } else if (stage === 1 && totalPercentage > 100) {
+            setPercWarn(true) // if first stage total percentage is greater than 100, warn user
         } else if ((stage + b) >= 1 && (stage + b) <= 3) {
             setStage((stage + b))
         }
@@ -72,6 +80,7 @@ const SplitWithSupportStaff: React.FC = () => {
                     />
                 
                 {catWarn && <div className="warn">There Must Be At Least One Staff Category</div>}
+                {percWarn && <div className="warn">Your Staff Splits Are More Than 100%</div>}
 
                 {ssKeys.length > 0 && <>
                     <h3>Your Categories</h3>
