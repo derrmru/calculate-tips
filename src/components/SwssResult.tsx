@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SwssResult.css";
 
 interface Props {
@@ -11,6 +11,11 @@ interface Props {
 }
 
 const SwssResult: React.FC<Props> = (props) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     const catArr = Object.keys(props.result);
 
     return (

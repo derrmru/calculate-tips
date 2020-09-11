@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import './Result.css'
 
 interface Props {
@@ -10,6 +10,11 @@ interface Props {
 
 const Result: React.FC<Props> = (props) => {
     const result = props.result;
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     return (
         <div 
             className='result-container'
