@@ -19,6 +19,14 @@
     color: var(--main-color);
 }
 
+.about-button {
+    text-align: center;
+}
+
+.about-button button {
+    padding: 20px;
+}
+
 /**
 *   MEDIA QUERIES**************************************
 */

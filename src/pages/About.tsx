@@ -23,8 +23,14 @@ const About: React.FC = () => {
                 <h2>Splitting By Hours</h2>
                     <p>Many restaurants and bars split tips by hours worked. This is fairer, so that people working shorter shifts but at better times don't get more tips than others.</p>
                     <p>This involves dividing the total tips received by total hours worked, then multiplying this by the hours each individual has worked.</p>
-                    <a href="/split-by-hours">
-                        <strong>| Split My Tips By Hours</strong>
+                    <p>The formula used on this site is: </p>
+                    <p><strong>(Total Tips / Total Hours) x Employee Hours</strong></p>
+                    <a href="/split-by-hours" className="about-button">
+                        <button 
+                            className="ripple"
+                            >
+                                Split My Tips By Hours
+                            </button>
                     </a>
 
                 <h2>Splitting Tips Amongst Support Staff</h2>
@@ -37,8 +43,10 @@ const About: React.FC = () => {
                         <li>Chefs: 10%</li>
                     </ul>
                     <p>This involves first splitting the total tips proportionally between these categories and then for each category, splitting by hours worked.</p>
-                    <a href="/split-with-support-staff">
-                        <strong>| Split My Tips Amongst Suppport Staff</strong>
+                    <p>The formula used on this site is: </p>
+                    <p><strong>((Total Tips x Percentage Due to Staff Category) / Total Hours) x Employee Hours</strong></p>
+                    <a href="/split-with-support-staff" className="about-button">
+                        <button className="ripple">Split My Tips Amongst Suppport Staff</button>
                     </a>
             </div>
             <Footer />
